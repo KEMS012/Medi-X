@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doctor Dashboard | MediCore</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+
+<body>
+  <div class="dashboard-container">
+    <nav class="sidebar">
+      <div class="sidebar-header">
+        <img src="../assets/Medi-X_logo-removebg-preview.png" alt="Medi-X Logo" class="logo">
+      </div>
+      <ul class="nav-links">
+        <li><a href="#dashboard" class="active"><i class="fas fa-home"></i> Dashboard</a></li>
+        <li><a href="#appointments"><i class="fas fa-calendar"></i> Appointments</a></li>
+        <li><a href="#patients"><i class="fas fa-users"></i> Patients</a></li>
+        <li><a href="#add-record-section"><i class="fas fa-file-medical"></i> Records</a></li>
+        <li><a href="#profile"><i class="fas fa-user"></i> Profile</a></li>
+      </ul>
+    </nav>
+
+    <main class="main-content">
+      <header class="dashboard-header">
+        <div class="header-left">
+          <h1>Doctor Dashboard</h1>
+        </div>
+        <div class="header-right">
+          <div class="doctor-profile">
+            <span id="doctorName"></span>
+            <div class="theme-switch-wrapper">
+              <label class="theme-switch" for="darkModeToggle">
+                <input type="checkbox" id="darkModeToggle" />
+                <div class="slider round"></div>
+              </label>
+            </div>
+            <button id="logout" class="btn btn-outline-danger"><i class="fas fa-sign-out-alt"></i> Logout</button>
+          </div>
+        </div>
+      </header>
+
+      <section class="statistics">
+        <div class="stat-card">
+          <i class="fas fa-user-clock"></i>
+          <h3>Today's Appointments</h3>
+          <p id="todayAppointments">0</p>
+        </div>
+        <div class="stat-card">
+          <i class="fas fa-users"></i>
+          <h3>Total Patients</h3>
+          <p id="totalPatients">0</p>
+        </div>
+        <div class="stat-card">
+          <i class="fas fa-file-medical"></i>
+          <h3>Records Created</h3>
+          <p id="totalRecords">0</p>
+        </div>
+      </section>
+
+      <section class="appointments-section">
+        <h2>Today's Appointments</h2>
+        <div id="appointmentsList" class="appointments-list">
+        </div>
+      </section>
+
+      <section class="add-record-section" style="display: none;">
+        <h2>Add New Medical Record</h2>
+        <form id="recordForm" class="record-form">
+          <div class="form-group">
+            <select id="patientSelect" required>
+              <option value="">Select Patient</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <input type="text" id="diagnosis" placeholder="Diagnosis" required>
+          </div>
+          <div class="form-group">
+            <textarea id="prescription" placeholder="Prescription" required></textarea>
+          </div>
+          <div class="form-group">
+            <textarea id="notes" placeholder="Additional Notes" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Save Record</button>
+        </form>
+      </section>
+
+      <section id="patients-section" style="display: none;"></section>
+
+      <section id="profile-section" style="display: none;"></section>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/shared.js"></script>
+  <script src="../js/doctor.js"></script>
+</body>
+
+</html>

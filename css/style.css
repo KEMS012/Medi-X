@@ -1,0 +1,164 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: white;
+  color: #333;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: whitesmoke;
+  color: blue;
+}
+
+.logo {
+  width: 120px;
+  opacity: 0;
+  transform: scale(0.8);
+  animation: fadeZoom 3s ease-out forwards;
+}
+
+@keyframes fadeZoom {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+nav a {
+  margin-left: 20px;
+  color: blue;
+  text-decoration: none;
+}
+
+.hero {
+  text-align: center;
+  padding: 150px 200px;
+  display: flex;
+}
+.hero img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  display: block;
+  margin-left: 50px;
+}
+#navToggle {
+  background: transparent;
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.nav-links a:not(.btn):hover {
+    color: #007bff !important;
+}
+
+.nav-links .btn:hover {
+    background-color: #0056b3 !important;
+}
+
+@media (max-width: 768px) {
+  #navToggle { display: inline-block; }
+  .nav-links {
+    position: absolute;
+    top: 64px; 
+    right: 16px;
+    background: white;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 12px;
+    border-radius: 6px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    display: none;
+  }
+  .nav-links.show {
+    display: flex;
+  }
+}
+
+.btn {
+  background: #004aad;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.form-container {
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+.features h2{
+  color: #043473;
+  justify-self: center;
+  text-align: center;
+}
+
+.hero > div {
+  flex: 1 1 50%;
+}
+
+.hero img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 992px) {
+  .hero {
+    flex-direction: column; 
+    padding: 80px 40px;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .hero > div {
+    width: 100%;
+  }
+  .hero img {
+    margin: 0 auto;
+    max-width: 520px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 40px 20px;
+  }
+  .hero h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .hero p {
+    font-size: 0.95rem;
+  }
+}

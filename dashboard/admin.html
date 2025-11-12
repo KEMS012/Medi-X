@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard/Medi-X</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+
+<body>
+  <div class="dashboard-container">
+    <nav class="sidebar">
+      <div class="sidebar-header">
+        <img src="../assets/Medi-X_logo-removebg-preview.png" alt="Medi-X Logo" class="logo">
+      </div>
+      <ul class="nav-links">
+        <li><a href="#dashboard" class="active"><i class="fas fa-home"></i> Dashboard</a></li>
+        <li><a href="#users"><i class="fas fa-users-cog"></i> User Management</a></li>
+        <li><a href="#reports"><i class="fas fa-chart-bar"></i> Reports</a></li>
+        <li><a href="#settings"><i class="fas fa-cog"></i> Settings</a></li>
+        <li><a href="#hospitals"><i class="fas fa-hospital-alt"></i> Hospital Management</a></li>
+        <li><a href="#profile"><i class="fas fa-user"></i> Profile</a></li>
+      </ul>
+    </nav>
+
+    <main class="main-content">
+      <header class="dashboard-header">
+        <div class="header-left">
+          <h1>Admin Dashboard</h1>
+        </div>
+        <div class="header-right">
+          <div class="admin-profile">
+            <img src="../assets/avatar.png" alt="Admin Avatar" class="avatar">
+            <span class="admin-name">Admin Name</span>
+          </div>
+          <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="darkModeToggle">
+              <input type="checkbox" id="darkModeToggle" />
+              <div class="slider round"></div>
+            </label>
+          </div>
+          <button id="logout" class="btn btn-outline-danger"><i class="fas fa-sign-out-alt"></i> Logout</button>
+        </div>
+      </header>
+
+      <div id="dashboard-section">
+        <section class="statistics">
+          <div class="stat-card">
+            <i class="fas fa-hospital"></i>
+            <h3>Total Hospitals</h3>
+            <p id="statHospitals">0</p>
+          </div>
+          <div class="stat-card">
+            <i class="fas fa-user-md"></i>
+            <h3>Total Doctors</h3>
+            <p id="statDoctors">0</p>
+          </div>
+          <div class="stat-card">
+            <i class="fas fa-users"></i>
+            <h3>Total Patients</h3>
+            <p id="statPatients">0</p>
+          </div>
+          <div class="stat-card">
+            <i class="fas fa-calendar-check"></i>
+            <h3>Appointments</h3>
+            <p id="statAppointments">0</p>
+          </div>
+        </section>
+
+        <section class="recent-activity">
+          <h2>Recent Activity</h2>
+          <div class="activity-list">
+          </div>
+        </section>
+      </div>
+
+      <section id="users-section" style="display: none;">
+        <div class="section-header">
+          <h2>User Management</h2>
+        </div>
+        <div class="management-section">
+          <div class="action-buttons">
+            <button class="btn btn-primary" id="addHospital"><i class="fas fa-plus"></i> Add Hospital</button>
+            <button class="btn btn-success" id="addDoctor"><i class="fas fa-plus"></i> Add Doctor</button>
+            <button class="btn btn-info" id="addPatient"><i class="fas fa-plus"></i> Add Patient</button>
+          </div>
+        </div>
+        <div id="userList" class="user-list-container">
+        </div>
+      </section>
+
+      <section id="reports-section" style="display: none;">
+        <div class="section-header">
+          <h2>System Reports</h2>
+          <button class="btn btn-warning" id="viewReports"><i class="fas fa-chart-bar"></i> Generate Report</button>
+        </div>
+      </section>
+
+      <section id="settings-section" style="display: none;">
+        <div class="section-header">
+          <h2>Application Settings</h2>
+        </div>
+        <div class="settings-container">
+          <form id="settingsForm">
+            <div class="form-check form-switch mb-3">
+              <input class="form-check-input" type="checkbox" role="switch" id="maintenanceModeSwitch">
+              <label class="form-check-label" for="maintenanceModeSwitch">Enable Maintenance Mode</label>
+              <small class="form-text text-muted d-block">When enabled, non-admin users will be redirected to a
+                maintenance page upon login.</small>
+            </div>
+            <button type="submit" class="btn btn-primary mt-3">Save Settings</button>
+          </form>
+        </div>
+      </section>
+
+      <section id="hospitals-section" style="display: none;">
+        <div class="section-header">
+          <h2>Hospital Management</h2>
+        </div>
+        <div class="management-section">
+          <div class="action-buttons">
+            <button class="btn btn-primary" id="addNewHospitalBtn"><i class="fas fa-plus"></i> Add New Hospital</button>
+          </div>
+        </div>
+        <div id="hospitalList" class="user-list-container">
+        </div>
+      </section>
+
+      <section id="profile-section" style="display: none;">
+        <h2>Admin Profile</h2>
+        <div class="profile-card">
+          <img src="../assets/avatar.png" alt="Admin Avatar" class="profile-avatar">
+          <label for="profileImage" class="change-avatar">
+            <i class="fas fa-camera"></i>
+          </label>
+          <input type="file" id="profileImage" hidden accept="image/*">
+          <h3 id="profileName"></h3>
+          <div class="profile-details">
+            <p><strong>Email:</strong> <span id="profileEmail"></span></p>
+          </div>
+          <button class="btn btn-primary" onclick="openEditAdminProfile()">Edit Profile</button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="../js/shared.js"></script>
+  <script src="/js/admin.js"></script>
+</body>
+
+</html>
