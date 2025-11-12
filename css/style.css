@@ -64,14 +64,6 @@ nav a {
   align-items: center;
 }
 
-.nav-links a:not(.btn):hover {
-    color: #007bff !important;
-}
-
-.nav-links .btn:hover {
-    background-color: #0056b3 !important;
-}
-
 @media (max-width: 768px) {
   #navToggle { display: inline-block; }
   .nav-links {
@@ -159,6 +151,10 @@ input, select {
     margin-bottom: 0.5rem;
   }
   .hero p {
+    font-size: 0.95rem;
+  }
+  .btn {
+    padding: 8px 14px;
     font-size: 0.95rem;
   }
 }
