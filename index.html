@@ -6,88 +6,113 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Medi-X Home</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-5Xdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" <link rel="stylesheet"
-    href="css/style.css">
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM8y+6b6f5a6b6f5a6b6f5a6b6f5a6b6f5a6b" crossorigin="anonymous">
 </head>
-<header>
-  <div>
-    <img src="assets/Medi-X_logo-removebg-preview.png" alt="Medi-X Logo" class="logo" style="height: 50px;">
 
+<body>
+  <header style="position: sticky; top: 0; z-index: 1000;">
+    <img src="assets/Medi-X_logo-removebg-preview.png" alt="Medi-X Logo" class="logo">
 
+    <button id="navToggle" aria-label="Toggle navigation" style="display:none;">☰</button>
+    <nav class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#contact">Contact</a>
+      <a href="login.html" class="btn">Login</a>
+    </nav>
+  </header>
 
-    <a href="login.html" class="btn">Get Started</a>e
-
-
-    </section>
-
-    <section class="about-us py-5 bg-light">
-      <div class="container">
-        <h2 class="text-center mb-4">About <span style="color: blue;">Us</span></h2>
-        <div class="row">
-          <div class="col-md-8 offset-md-2">
-            <p class="lead text-center">Medi-X is dedicated to providing comprehensive and user-friendly electronic
-              health record solutions. Our mission is to improve healthcare delivery through technology.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-
-    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner" style="max-height: 500px; width: 100%; margin: 0 auto;">
-        <div class="carousel-item active">
-          <img src="assets/llll.jpg" class="d-block w-100" alt="..."
-            style="object-fit: contain; height: 500px; max-width: 800px; margin: 0 auto;">
-        </div>
-        <div class="carousel-item">
-          <img src="assets/lllll.jpg" class="d-block w-100" alt="..."
-            style="object-fit: contain; height: 500px; max-width: 800px; margin: 0 auto;">
-        </div>
-        <div class="carousel-item">
-          <img src="assets/llllll.jpg" class="d-block w-100" alt="..."
-            style="object-fit: contain; height: 500px; max-width: 800px; margin: 0 auto;">
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
-        data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
-        data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
+  <section class="hero">
+    <div>
+      <img src="assets/Medi-X_logo-removebg-preview.png" alt="Medi-X Logo" class="logo">
+      <h1>Welcome to Medi-X</h1>
+      <p>Your complete electronic health record solution.</p>
+      <a href="login.html" class="btn">Get Started</a>
+    </div>
+    <div>
+      <img src="assets/header.webp" alt="">
     </div>
 
+  </section>
+  
+  <section class="about-us py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">About <span style="color: blue;">Us</span></h2>
+      <div class="row">
+        <div class="col-md-8 offset-md-2">
+          <p class="lead text-center">Medi-X is dedicated to providing comprehensive and user-friendly electronic
+            health record solutions. Our mission is to improve healthcare delivery through technology.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <section class="features">
-      <h2>Core <span>Features</span></h2>
-      <div>
-        <div class="card">
-          <img src="assets/pa and doc.webp" class="card-img-top" alt="...">
-          <div class="card-body">
-            <p class="card-text">Manage patients and doctors</p>
-          </div>
+
+
+  <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel"
+    style="background-color: rgb(78, 78, 130);">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="assets/llll.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="assets/lllll.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="assets/llllll.jpg" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+  <section class="features">
+    <h2 style="justify-content: center; margin-top: 5rem;">Core <span
+        style="color: blue; justify-content: center;">Features</span></h2>
+    <div
+      style="display: flex; gap: 1rem; justify-content: center; align-items: center; margin: 1rem; margin-top: 5rem;">
+      <div class="card" style="width: 18rem; box-shadow: 0 4px 8px whitesmoke; border: 3px solid white;">
+        <img src="assets/pa and doc.webp" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">Manage patients and doctors</p>
         </div>
-        <div class="card">
-          <img src="assets/medic history.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <p class="card-text">Store medical history securely</p>
-          </div>
+      </div>
+      <div class="card" style="width: 18rem; box-shadow: 0 4px 8px whitesmoke; border: 3px solid white">
+        <img src="assets/medic history.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">Store medical history securely</p>
         </div>
-        <div class="card">
-          <img src="assets/book appointment.jpeg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <p class="card-text">Book appointments & view prescriptions</p>
-          </div>
+      </div>
+      <div class="card" style="width: 18rem; box-shadow: 0 4px 8px whitesmoke; border: 3px solid white">
+        <img src="assets/book appointment.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">Book appointments & view prescriptions</p>
         </div>
-        </d " Our <span style=" color: blue;">Patients Say</span></h2>
+      </div>
+    </div>
+  </section>
+  <section>
+
+  </section>
+  
+  <section class="testimonials py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">What Our <span style="color: blue;">Patients Say</span></h2>
+      <div class="row">
         <div class="col-md-6">
           <div class="card shadow-sm border-0">
             <div class="card-body">
@@ -95,138 +120,143 @@
                 efficiency." - Dr. Salau</p>
             </div>
           </div>
-          <div class="col-md-6">
-            <div class="card shadow-sm border-0">
-              <div class="card-body">
-                <p class="card-text">"I love how I can access my medical records anytime, anywhere. Medi-X has made
-                  managing my health so much easier." - Janet Adigun</p>
-              </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card shadow-sm border-0">
+            <div class="card-body">
+              <p class="card-text">"I love how I can access my medical records anytime, anywhere. Medi-X has made
+                managing my health so much easier." - Janet Adigun</p>
             </div>
           </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section class="services py-5 bg-light">
-      <div class="container">
-        <h2 class="text-center mb-4">Our <span style="color: blue;">Services</span></h2>
-        <div class="row">
-          <div class="col-md-3">
-            <div class="card shadow-sm border-0">
-              <div class="card-body text-center">
-                <i class="fas fa-notes-medical fa-3x mb-3"></i>
-                <h5 class="card-title">Electronic Health Records</h5>
-                <p class="card-text">Securely store and manage patient health information.</p>
-              </div>
+  <section class="services py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Our <span style="color: blue;">Services</span></h2>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card shadow-sm border-0">
+            <div class="card-body text-center">
+              <i class="fas fa-notes-medical fa-3x mb-3"></i>
+              <h5 class="card-title">Electronic Health Records</h5>
+              <p class="card-text">Securely store and manage patient health information.</p>
             </div>
           </div>
-          <div class="col-md-3">
-            <div class="card shadow-sm border-0">
-              <div class="card-body text-center">
-                <i class="fas fa-calendar-alt fa-3x mb-3"></i>
-                <h5 class="card-title">Appointment Scheduling</h5>
-                <p class="card-text">Easily schedule and manage patient appointments.</p>
-              </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card shadow-sm border-0">
+            <div class="card-body text-center">
+              <i class="fas fa-calendar-alt fa-3x mb-3"></i>
+              <h5 class="card-title">Appointment Scheduling</h5>
+              <p class="card-text">Easily schedule and manage patient appointments.</p>
             </div>
           </div>
-          <div class="col-md-3">
-            <div class="card shadow-sm border-0">
-              <div class="card-body text-center">
-                <i class="fas fa-prescription fa-3x mb-3"></i>
-                <h5 class="card-title">Prescription Management</h5>
-                <p class="card-text">Manage and track patient prescriptions efficiently.</p>
-              </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card shadow-sm border-0">
+            <div class="card-body text-center">
+              <i class="fas fa-prescription fa-3x mb-3"></i>
+              <h5 class="card-title">Prescription Management</h5>
+              <p class="card-text">Manage and track patient prescriptions efficiently.</p>
             </div>
           </div>
-          <div class="col-md-3">
-            <div class="card shadow-sm border-0">
-              <div class="card-body text-center">
-                <i class="fas fa-user-nurse fa-3x mb-3"></i>
-                <h5 class="card-title">Patient Portal</h5>
-                <p class="card-text">Enable patients to access their health information online.</p>
+        </div>
+        <div class="col-md-3">
+          <div class="card shadow-sm border-0">
+            <div class="card-body text-center">
+              <i class="fas fa-user-nurse fa-3x mb-3"></i>
+              <h5 class="card-title">Patient Portal</h5>
+              <p class="card-text">Enable patients to access their health information online.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="team py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Our <span style="color: blue;">Team</span></h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card shadow-sm border-0">
+            <img src="" class="card-img-top" alt="Team Member 1">
+            <div class="card-body text-center">
+              <h5 class="card-title">Bluedolly</h5>
+              <p class="card-text">CEO</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card shadow-sm border-0">
+            <img src="" class="card-img-top" alt="Team Member 2">
+            <div class="card-body text-center">
+              <h5 class="card-title">Mimi</h5>
+              <p class="card-text">CTO</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card shadow-sm border-0">
+            <img src="" class="card-img-top" alt="Team Member 3">
+            <div class="card-body text-center">
+              <h5 class="card-title">Mr Ley</h5>
+              <p class="card-text">Head of Development</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Frequently Asked <span style="color: blue;">Questions</span></h2>
+      <div class="row">
+        <div class="col-md-8 offset-md-2">
+          <div class="accordion" id="faqAccordion">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                  aria-expanded="true" aria-controls="collapseOne">
+                  What is Medi-X?
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Medi-X is a comprehensive electronic health record solution designed to streamline healthcare
+                  delivery.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  How does Medi-X improve healthcare?
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Medi-X improves healthcare by providing easy access to patient records, streamlining appointment
+                  scheduling, and facilitating prescription management.
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="team py-5">
-      <div class="container">
-        <h2 class="text-center mb-4">Our <span style="color: blue;">Team</span></h2>
-        <div class="row text-center">
-          <div class="col-md-4">
-            <div class="card shadow-sm border-0">
-              <img src="" class="card-img-top" alt="Team Member 1">
-              <div class="card-body text-center">
-                <h5 class="card-title">Bluedolly</h5>
-                <p class="card-text">CEO</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card shadow-sm border-0 mt-3 mt-md-0">
-              <img src="" class="card-img-top" alt="Team Member 2">
-              <div class="card-body text-center">
-                <h5 class="card-title">Mimi</h5>
-                <p class="card-text">CTO</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card shadow-sm border-0 mt-3 mt-md-0">
-              <img src="" class="card-img-top" alt="Team Member 3">
-              <div class="card-body text-center">
-                <h5 class="card-title">Mr Ley</h5>
-                <p class="card-text">Head of Development</p>
-              </div>
-            </div>
-          </div>
-        </div>
-    </section>
-
-    <section class="faq py-5 bg-light">
-      <div class="container">
-        <h2 class="text-center mb-4">Frequently Asked <span style="color: blue;">Questions</span></h2>
-        <div class="row">
-          <div class="col-md-8 offset-md-2">
-            <div class="accordion" id="faqAccordion">
-              <div class="accos" headingOne">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                  aria-expanded="true" aria-controls="collapseOne">
-                  What is Medi-X?
-                </button>
-                </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-                  data-bs-parent="#faqAccordion">
-                  <div class="accordion-body">
-                    Medi-X is a comprehensive electronic health record solution designed to streamline healthcare
-                    delivery.
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingTwo">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                      data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                      How does Medi-X improve healthcare?
-                    </button>
-                  </h2>
-                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                    data-bs-parent="#faqAccordion">
-                    <div class="accordion-body">
-                      Medi-X improves healthcare by providing easy access to patient records, streamlining appointment
-                      scheduling, and facilitating prescription management.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-    </section>
-
-    <footer>
-      <p>© 2025 Medi-X. All rights reserved.</p>
-    </footer>
-    </body>
+  <footer>
+    <p style="position: static; justify-content: center; text-align: center;">© 2025 Medi-X. All rights reserved.</p>
+  </footer>
+</body>
 
 </html>
